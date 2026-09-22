@@ -1,20 +1,137 @@
+node_modules
+# Keep environment variables out of version control
+# ===================================
 # Dependencies
-/node_modules/
+# ===================================
+node_modules/
+**/node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
 
-# Build output
-/dist/
+# ===================================
+# Next.js
+# ===================================
+.next/
+out/
+next-env.d.ts
+.vercel
 
+# ===================================
+# Production builds
+# ===================================
+build/
+dist/
+*.tsbuildinfo
+
+# ===================================
 # Environment variables
-.env*
+# ===================================
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
 !.env.example
 
+# ===================================
 # Logs
+# ===================================
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
+yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
-# Test coverage
-/coverage/
+# ===================================
+# Runtime data
+# ===================================
+pids
+*.pid
+*.seed
+*.pid.lock
 
-# TypeScript build metadata
+# ===================================
+# Coverage / Testing
+# ===================================
+coverage/
+*.lcov
+.nyc_output
+
+# ===================================
+# MongoDB / Database
+# ===================================
+*.sqlite
+*.sqlite3
+data/db/
+
+# ===================================
+# Cache
+# ===================================
+.cache/
+.eslintcache
+.stylelintcache
+.turbo/
+.swc/
+
+# ===================================
+# Editor / IDE
+# ===================================
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ===================================
+# OS generated files
+# ===================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===================================
+# TypeScript
+# ===================================
 *.tsbuildinfo
+next-env.d.ts
+
+# ===================================
+# Package manager locks (optional — 
+# uncomment ONLY if not standardizing on one)
+# ===================================
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ===================================
+# Vercel / Deployment
+# ===================================
+.vercel
+.netlify
+
+# ===================================
+# Misc
+# ===================================
+*.tgz
+.env.vault
+.turbo
+.vscode-test
+uploads/
+tmp/
+temp/
+
+
+/generated/prisma
