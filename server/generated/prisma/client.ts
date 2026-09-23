@@ -66,3 +66,13 @@ export type Verification = Prisma.VerificationModel
  * 
  */
 export type Workspace = Prisma.WorkspaceModel
+/**
+ * Model Source
+ * 
+ */
+export type Source = Prisma.SourceModel
+/**
+ * Model SourceChunk
+ * 
+ */
+export type SourceChunk = Prisma.SourceChunkModel

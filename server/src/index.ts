@@ -6,6 +6,7 @@ import { auth } from "./lib/auth";
 import { requireAuth } from "./middleware/require-auth";
 import { errorHandler } from "./middleware/error-handler.middleware";
 import { workspaceRoutes } from "./routes/workspace.routes";
+import { sourceRoutes } from "./routes/source.routes";
 
 const app = express();
 const PORT = Number(process.env.PORT ?? 8081);
@@ -29,6 +30,7 @@ app.get("/health", (_req, res) => {
 // Keep authentication routes public; protect application API routes by default.
 app.use("/api", requireAuth);
 app.use("/api/workspaces", workspaceRoutes);
+app.use("/api/workspaces/:workspaceId/sources", sourceRoutes);
 app.use(errorHandler);
 
 app.listen(PORT, () => {
