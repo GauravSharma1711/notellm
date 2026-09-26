@@ -7,4 +7,16 @@
 *
 * 🟢 You can import this file directly.
 */
-export {};
+export const SourceType = {
+    PDF: 'PDF',
+    WEBSITE: 'WEBSITE',
+    YOUTUBE: 'YOUTUBE',
+    TEXT: 'TEXT',
+    MARKDOWN: 'MARKDOWN'
+};
+export const SourceStatus = {
+    PENDING: 'PENDING',
+    PROCESSING: 'PROCESSING',
+    READY: 'READY',
+    FAILED: 'FAILED'
+};
